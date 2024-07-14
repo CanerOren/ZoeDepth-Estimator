@@ -22,7 +22,7 @@ options:
 ```
 ### API Usage
 ``` bash
-http://127.0.0.1:8000/predict
+http://127.0.0.1:8041/predict
 ```
 
 ## Installation
@@ -37,9 +37,9 @@ Install depth estimation project with pip
 
 To run this project, you will need to add the following environment variables to your .env file
 
-`API_KEY`
+`IMG_API_KEY`
 
-`ANOTHER_API_KEY`
+
 
 
 ## Deployment
@@ -47,7 +47,8 @@ To run this project, you will need to add the following environment variables to
 To deploy this project run
 
 ```bash
-  npm run deploy
+  docker build -t zoedepth_estimation .
+  docker run -d -p zoedepth_estimation
 ```
 
 
